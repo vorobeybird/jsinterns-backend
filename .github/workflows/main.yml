@@ -41,6 +41,6 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -t deploy .
-          docker tag deploy:latest 501317799215.dkr.ecr.us-west-2.amazonaws.com/backend:latest
-          docker push 501317799215.dkr.ecr.us-west-2.amazonaws.com/backend:latest
-          echo "::set-output name=image::501317799215.dkr.ecr.us-west-2.amazonaws.com/backend:latest"
+          docker tag deploy:latest 501317799215.dkr.ecr.us-west-2.amazonaws.com/backend:v1
+          docker push 501317799215.dkr.ecr.us-west-2.amazonaws.com/backend:v1
+          echo "::set-output name=image::501317799215.dkr.ecr.us-west-2.amazonaws.com/backend:v1"
